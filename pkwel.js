@@ -1,6 +1,6 @@
 const request = require('request');
 const Discord = require("discord.js");
-const fs = require("fs");//var config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
+const fs = require("fs"); //var config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
 const bot = new Discord.Client();
 const prefix = "$";
 const botlogchannel = "406504806954565644";
@@ -14,14 +14,9 @@ const wfortunes = ["{user} keep you`r shoes out of door", "hey {user} show your 
 const wimages = [`https://imgur.com/Z2fpFVi.png`, `https://imgur.com/G29egX4.png`, `https://imgur.com/LHdn5I8.png`, `https://imgur.com/GziAP26.png`, `https://imgur.com/GjI5Vpk.png`, `https://imgur.com/WqTnmM0.png`, `https://imgur.com/qknRCM7.png`];
 const icwstaff = ["385099687465844736", "278587244443467777", "288961251973791744"];
 const owmkey = process.env.KEY_WEATHER;
-const Cleverbot = require('cleverbot-node');
-const clbot = new Cleverbot();
 var Heroku = require('heroku.node');
 var hbot = new Heroku({ email: 'pardeepsingh1236512365@gmail.com', api_key: 'Process.env.H_APIKEY' });
 const { inspect } = require("util");
-const cheerio = require('cheerio');
-const snekfetch = require('snekfetch');
-const querystring = require('querystring');
 const firebase = require("firebase");
 const Jimp = require("jimp");
 
