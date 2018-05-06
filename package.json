@@ -1,0 +1,30 @@
+{
+  "name": "picabot",
+  "version": "1.0.0",
+  "description": "A discord bot for didney worl who has an appetite for non-nutritive substances",
+  "main": "picabot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronshappell/picabot.git"
+  },
+  "author": "Aaron Shappell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aaronshappell/picabot/issues"
+  },
+  "homepage": "https://github.com/aaronshappell/picabot#readme",
+  "devDependencies": {
+    "eslint": "^4.5.0"
+  },
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "dotenv": "^4.0.0",
+    "heroku.node": "^0.2.1",
+    "pm2": "^2.10.2",
+    "firebase": "^4.11.0",
+    "jimp": "^0.2.28"
+  }
+}
