@@ -42,7 +42,7 @@ bot.on("disconnect", function() {
 
 bot.login(process.env.BOTTOKEN).then(function() {
     console.log("Welcome Bot logged in");
-    bot.channels.get(botlogchannel).send("bot logged in");
+    bot.channels.get(botlogchannel).send("Welcome bot logged in");
 }).catch(console.log);
 bot.on('guildMemberAdd', async(member) => {
     const wmstatus = (await db.ref(`servers/${member.guild.id}`).child('welcomeMstatus').once('value')).val();
