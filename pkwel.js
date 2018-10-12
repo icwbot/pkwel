@@ -49,6 +49,8 @@ bot.on('guildMemberAdd', async(member) => {
     const wtextonoff = (await db.ref(`servers/${member.guild.id}`).child('wtextonoff').once('value')).val();
     const wimageonoff = (await db.ref(`servers/${member.guild.id}`).child('wimageonoff').once('value')).val();
     const wuinfoonoff = (await db.ref(`servers/${member.guild.id}`).child('wuinfoonoff').once('value')).val();
+    const wcustomimageurl = (await db.ref(`servers/${member.guild.id}`).child('wcustomimageurl').once('value')).val();
+    const wcustomimageonoff = (await db.ref(`servers/${member.guild.id}`).child('wcustomimageonoff').once('value')).val();
     const wm = (await db.ref(`servers/${member.guild.id}`).child('wmessage').once('value')).val();
     const wc = (await db.ref(`servers/${member.guild.id}`).child('wchannelid').once('value')).val();
     const fn = Math.floor(Math.random() * wfortunes.length);
@@ -83,11 +85,16 @@ bot.on('guildMemberAdd', async(member) => {
             }
         }
         if (wimageonoff === "on") {
+            if (wcustomimageonoff === "on" || wcustomimageurl) {
+                const images2 = wcustomimageurl
+            } else {
+                const images2 = images
+            }
             let u = `you are the ${member.guild.memberCount}${ord(member.guild.memberCount)} user`;
             let s = member.guild.name;
             let img = member.user.displayAvatarURL;
             Jimp.read(`https://cloud.githubusercontent.com/assets/414918/11165709/051d10b0-8b0f-11e5-864a-20ef0bada8d6.png`).then(function(mask) {
-                Jimp.read(img).then(function(image) {
+                Jimp.read(img).then(function(images2) {
                     Jimp.read(images).then(function(image2) {
                         Jimp.loadFont(Jimp.FONT_SANS_16_BLACK).then(function(font) {
                             image2.print(font, 121, 57, s);
