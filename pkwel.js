@@ -86,9 +86,9 @@ bot.on('guildMemberAdd', async(member) => {
         }
         if (wimageonoff === "on") {
             if (wcustomimageonoff === "on" || wcustomimageurl) {
-                const images2 = wcustomimageurl
+                images2 = wcustomimageurl
             } else {
-                const images2 = images
+                images2 = images
             }
             let u = `you are the ${member.guild.memberCount}${ord(member.guild.memberCount)} user`;
             let s = member.guild.name;
