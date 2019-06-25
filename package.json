@@ -1,6 +1,14 @@
 {
   "name": "picabot",
+
   "version": "1.0.0",
+  "scripts": {
+        "heroku-postbuild": "npm run build"
+    },
+  "engines": {
+    "npm": "6.9.0",
+    "node": "8.10.0"
+},
   "description": "A discord bot for didney worl who has an appetite for non-nutritive substances",
   "main": "picabot.js",
   "scripts": {
@@ -20,7 +28,7 @@
     "eslint": "^4.5.0"
   },
   "dependencies": {
-    "discord.js": "^11.4.2",
+    "discord.js": "^11.5.1",
     "dotenv": "^4.0.0",
     "heroku.node": "^0.2.1",
     "pm2": "^2.10.2",
