@@ -145,10 +145,11 @@ bot.on('guildMemberAdd', async(member) => {
                                         image2.print(font, 104, 20, member.user.tag);
                                         Jimp.loadFont(Jimp.FONT_SANS_32_WHITE).then(function(font) {
                                             image2.print(font, 102, 18, member.user.tag)
-                                            image2.resize(400, 120);
-                                            image.resize(90, 90);
-                                            mask.resize(90, 90);
+                                            image2.resize(800, 240);
+
+                                            mask.resize(,640, 640);
                                             image.mask(mask, 0, 0);
+                                            image.resize(180, 180);
                                             image2.composite(image, 5, 5);
                                             image2.getBuffer(Jimp.MIME_PNG,
                                             (error, buffer) => { member.guild.channels.get(wc.toString()).send({ files: [{ name: 'welcome.png', attachment: buffer }] }); });
