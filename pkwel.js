@@ -147,7 +147,7 @@ bot.on('guildMemberAdd', async(member) => {
                                             image2.print(font, 102, 18, member.user.tag)
                                             image2.resize(800, 240);
 
-                                            mask.resize(,640, 640);
+                                            mask.resize(640, 640);
                                             image.mask(mask, 0, 0);
                                             image.resize(180, 180);
                                             image2.composite(image, 5, 5);
